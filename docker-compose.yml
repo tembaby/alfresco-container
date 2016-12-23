@@ -1,0 +1,18 @@
+alfresco_db:
+  image: postgres:9.4.8
+  volumes:
+  - ./db_store/data:/var/lib/postgresql/data
+  environment:
+    LC_ALL: C.UTF-8
+    POSTGRES_DB: alfrescodb
+    POSTGRES_USER: alfresco
+    POSTGRES_PASSWORD: <DB_PASSWORD>
+alfresco:
+  build: alfresco
+  hostname: alfresco.example.com
+  volumes:
+  - ./alfresco/alfresco:/opt/alfresco
+  ports:
+  - "8080:8080"
+  links:
+  - alfresco_db:postgres.local
