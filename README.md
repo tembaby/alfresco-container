@@ -57,12 +57,9 @@ Note: removed the backslaches around ;urp;
 
 - Add the following to the file tomcat/shared/classes/alfresco-global.properties:
 
-# -te
 cifs.enabled=false
-#cifs.tcpipSMB.port=445
 ftp.enabled=false
 nfs.enabled=false
-# Transformers limitations
 content.transformer.OpenOffice.extensions.xls.pdf.maxSourceSizeKBytes=10240
 content.transformer.OpenOffice.extensions.docx.pdf.maxSourceSizeKBytes=10240
 content.transformer.OpenOffice.extensions.xlsx.pdf.maxSourceSizeKBytes=10240
